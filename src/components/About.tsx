@@ -7,13 +7,13 @@ export default function About() {
         </h2>
         <div className="space-y-6 text-gray-300">
           <p>
-            Hello, My name is Navarit Rodsamrit. I'm 26 years old and currently working as a Manufacturing Supervisor at Utac Thai Limited. I graduated with a Bachelor's Degree in Applied Physics from King Mongkut's Institute of Technology Ladkrabang.
+            Hello, My name is Navarit Rodsamrit. I&apos;m 26 years old and currently working as a Manufacturing Supervisor at Utac Thai Limited. I graduated with a Bachelor&apos;s Degree in Applied Physics from King Mongkut&apos;s Institute of Technology Ladkrabang.
           </p>
           <p>
-            I have experience in production management, engineering, and customer support, with expertise in tools like Python, SQL, SolidWorks, and Altium Designer. I'm also skilled in problem-solving, teamwork, and leadership, which help me adapt and excel in challenging roles.
+            I have experience in production management, engineering, and customer support, with expertise in tools like Python, SQL, SolidWorks, and Altium Designer. I&apos;m also skilled in problem-solving, teamwork, and leadership, which help me adapt and excel in challenging roles.
           </p>
           <p>
-            I'm passionate about contributing to innovative projects and continuously improving my skills to deliver excellent results.
+            I&apos;m passionate about contributing to innovative projects and continuously improving my skills to deliver excellent results.
           </p>
         </div>
       </div>

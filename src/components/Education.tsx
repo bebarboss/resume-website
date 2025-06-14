@@ -1,5 +1,7 @@
 'use client'
 
+import Image from 'next/image'
+
 interface EducationItem {
   degree: string
   school: {
@@ -31,50 +33,40 @@ const education: EducationItem[] = [
 export default function Education() {
   return (
     <section id="education" className="py-20">
-      <h2 className="text-3xl font-bold text-white mb-12 text-center">
-        Education
-      </h2>
-      <div className="max-w-3xl mx-auto space-y-12">
-        {education.map((edu, index) => (
-          <div key={index} className="relative pl-8 border-l-2 border-blue-500">
-            <div className="absolute -left-2 top-0 w-4 h-4 rounded-full bg-blue-500" />
-            <div className="flex items-start gap-4 mb-4">
-              <a
-                href={edu.school.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-16 h-16 rounded-lg bg-gray-800 p-2 border border-gray-700 flex items-center justify-center hover:border-blue-500 transition-colors"
-              >
-                <img
-                  src={edu.logo}
-                  alt={`${edu.school.name} logo`}
-                  className="w-full h-full object-contain"
-                  onError={(e) => {
-                    const target = e.target as HTMLImageElement;
-                    target.src = 'https://www.hr.kmitl.ac.th/wp-content/uploads/2020/08/cropped-kmitl-logoThai.png';
-                  }}
-                />
-              </a>
-              <div>
-                <h3 className="text-xl font-bold text-white">{edu.degree}</h3>
-                <a
-                  href={edu.school.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-400 font-medium hover:underline"
-                >
-                  {edu.school.name}
-                </a>
-                <p className="text-gray-400 text-sm">{edu.period}</p>
-              </div>
+      <div className="max-w-4xl mx-auto px-4">
+        <h2 className="text-3xl font-bold text-white mb-12 text-center">
+          Education
+        </h2>
+        <div className="bg-gray-800 rounded-lg p-6 shadow-lg border border-gray-700">
+          <div className="flex items-start gap-4">
+            <div className="relative w-16 h-16 flex-shrink-0">
+              <Image
+                src="https://www.hr.kmitl.ac.th/wp-content/uploads/2020/08/cropped-kmitl-logoThai.png"
+                alt="KMITL logo"
+                fill
+                className="rounded-lg object-cover"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.src = '/placeholder.svg';
+                }}
+              />
             </div>
-            <ul className="list-disc list-inside text-gray-300 space-y-2">
-              {edu.description.map((item, i) => (
-                <li key={i}>{item}</li>
-              ))}
-            </ul>
+            <div>
+              <h3 className="text-xl font-semibold text-white">
+                Bachelor of Science in Applied Physics
+              </h3>
+              <p className="text-blue-400 mb-1">
+                King Mongkut&apos;s Institute of Technology Ladkrabang
+              </p>
+              <p className="text-gray-400 text-sm mb-4">2019 - 2023</p>
+              <ul className="list-disc list-inside text-gray-300 space-y-2">
+                <li>GPA: 3.25</li>
+                <li>Specialized in electronics and instrumentation</li>
+                <li>Completed senior project on IoT-based monitoring system</li>
+              </ul>
+            </div>
           </div>
-        ))}
+        </div>
       </div>
     </section>
   )
