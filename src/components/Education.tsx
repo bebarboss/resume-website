@@ -13,7 +13,7 @@ export default function Education() {
           <div className="flex items-start gap-4">
             <div className="relative w-16 h-16 flex-shrink-0">
               <Image
-                src="https://media.licdn.com/dms/image/C4E0BAQH4QXxJpJpqFA/company-logo_200_200/0/1630997552198/king_mongkuts_institute_of_technology_ladkrabang_logo?e=2147483647&v=beta&t=Tz8QaH9FYNc5MxfzPGQp-N3QgEIZBHrZmLQXvZVVVA4"
+                src="https://mewworrameth.weebly.com/uploads/5/4/1/5/54153001/373162167.png?264"
                 alt="KMITL logo"
                 fill
                 className="rounded-lg object-cover"
