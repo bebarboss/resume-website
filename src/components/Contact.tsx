@@ -1,16 +1,16 @@
 export default function Contact() {
   return (
     <section id="contact" className="py-20">
-      <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
+      <h2 className="text-3xl font-bold text-white mb-12 text-center">
         Get In Touch
       </h2>
       <div className="max-w-3xl mx-auto">
-        <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-8">
+        <div className="bg-gray-800 rounded-lg shadow-sm border border-gray-700 p-8">
           <form className="space-y-6">
             <div>
               <label
                 htmlFor="name"
-                className="block text-sm font-medium text-gray-700 mb-1"
+                className="block text-sm font-medium text-gray-300 mb-1"
               >
                 Name
               </label>
@@ -18,14 +18,14 @@ export default function Contact() {
                 type="text"
                 id="name"
                 name="name"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-white placeholder-gray-400"
                 required
               />
             </div>
             <div>
               <label
                 htmlFor="email"
-                className="block text-sm font-medium text-gray-700 mb-1"
+                className="block text-sm font-medium text-gray-300 mb-1"
               >
                 Email
               </label>
@@ -33,14 +33,14 @@ export default function Contact() {
                 type="email"
                 id="email"
                 name="email"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-white placeholder-gray-400"
                 required
               />
             </div>
             <div>
               <label
                 htmlFor="message"
-                className="block text-sm font-medium text-gray-700 mb-1"
+                className="block text-sm font-medium text-gray-300 mb-1"
               >
                 Message
               </label>
@@ -48,7 +48,7 @@ export default function Contact() {
                 id="message"
                 name="message"
                 rows={4}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-white placeholder-gray-400"
                 required
               />
             </div>
@@ -66,7 +66,7 @@ export default function Contact() {
             href="https://github.com/username"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-600 hover:text-gray-900"
+            className="text-gray-400 hover:text-white"
           >
             <span className="sr-only">GitHub</span>
             <svg
@@ -85,7 +85,7 @@ export default function Contact() {
             href="https://linkedin.com/in/username"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-600 hover:text-gray-900"
+            className="text-gray-400 hover:text-white"
           >
             <span className="sr-only">LinkedIn</span>
             <svg
@@ -104,7 +104,7 @@ export default function Contact() {
             href="https://twitter.com/username"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-600 hover:text-gray-900"
+            className="text-gray-400 hover:text-white"
           >
             <span className="sr-only">Twitter</span>
             <svg

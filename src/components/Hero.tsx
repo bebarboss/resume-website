@@ -1,15 +1,15 @@
 export default function Hero() {
   return (
     <section className="py-20 text-center">
-      <h1 className="text-5xl font-bold text-gray-900 mb-4">
-        John Doe
+      <h1 className="text-5xl font-bold text-white mb-4">
+        Navarit Rodsamrit
       </h1>
-      <h2 className="text-2xl text-gray-600 mb-8">
-        Full Stack Developer
+      <h2 className="text-2xl text-gray-300 mb-8">
+        Manufacturing Supervisor
       </h2>
-      <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-        Passionate about creating elegant solutions to complex problems.
-        Specializing in modern web technologies and user-centered design.
+      <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+        Passionate about production management and engineering solutions.
+        Specializing in manufacturing operations and technical problem-solving.
       </p>
       <div className="mt-8 flex justify-center gap-4">
         <a
@@ -20,7 +20,7 @@ export default function Hero() {
         </a>
         <a
           href="#projects"
-          className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors"
+          className="border border-blue-600 text-blue-400 px-6 py-3 rounded-lg hover:bg-blue-900/30 transition-colors"
         >
           View Projects
         </a>

@@ -7,33 +7,39 @@ interface ExperienceItem {
 
 const experiences: ExperienceItem[] = [
   {
-    title: 'Senior Full Stack Developer',
-    company: 'Tech Solutions Inc.',
-    period: '2021 - Present',
+    title: 'Manufacturing Supervisor',
+    company: 'Utac thai limit.',
+    period: '2023 - Present',
     description: [
-      'Led the development of a cloud-based SaaS platform serving 100,000+ users',
-      'Implemented CI/CD pipelines reducing deployment time by 60%',
-      'Mentored junior developers and conducted code reviews'
+      'Oversee daily production operations',
+      'Ensure product quality and compliance',
+      'Resolve production issues promptly.',
+      'Train and supervise production staff',
+      'Implement process improvements',
+      'Monitor machinery and coordinate maintenance',
+      'Prepare and present production reports'
     ]
   },
   {
-    title: 'Full Stack Developer',
-    company: 'Digital Innovations',
-    period: '2019 - 2021',
+    title: 'Service Engineer',
+    company: 'Advance Siam Tech',
+    period: '2012 - 2023',
     description: [
-      'Developed and maintained multiple client projects using React and Node.js',
-      'Optimized database queries improving application performance by 40%',
-      'Collaborated with UX designers to implement responsive designs'
+      'Provide customer support regarding machine information',
+      'Conduct calibration of measuring instruments',
+      'Measure machinery vibration in factories acrossious provinces'
     ]
   },
   {
-    title: 'Junior Developer',
-    company: 'WebTech Solutions',
-    period: '2018 - 2019',
+    title: 'Engineering',
+    company: 'Micropower Electronics',
+    period: '2021 - 2022',
     description: [
-      'Built and maintained client websites using modern web technologies',
-      'Participated in agile development processes and daily stand-ups',
-      'Contributed to the development of internal tools and utilities'
+      'Establish and assemble electrical circuits',
+      'Inspect and repair electrical circuits',
+      'Utilize Altium Designer for circuit design',
+      'Use SolidWorks for mechanical and system design',
+      'Develop C language code to control an ESP32 microcontroller'
     ]
   }
 ]
@@ -41,19 +47,19 @@ const experiences: ExperienceItem[] = [
 export default function Experience() {
   return (
     <section id="experience" className="py-20">
-      <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
+      <h2 className="text-3xl font-bold text-white mb-12 text-center">
         Work Experience
       </h2>
       <div className="max-w-3xl mx-auto space-y-12">
         {experiences.map((exp, index) => (
-          <div key={index} className="relative pl-8 border-l-2 border-blue-600">
-            <div className="absolute -left-2 top-0 w-4 h-4 rounded-full bg-blue-600" />
+          <div key={index} className="relative pl-8 border-l-2 border-blue-500">
+            <div className="absolute -left-2 top-0 w-4 h-4 rounded-full bg-blue-500" />
             <div className="mb-2">
-              <h3 className="text-xl font-bold text-gray-900">{exp.title}</h3>
-              <p className="text-blue-600 font-medium">{exp.company}</p>
-              <p className="text-gray-500 text-sm">{exp.period}</p>
+              <h3 className="text-xl font-bold text-white">{exp.title}</h3>
+              <p className="text-blue-400 font-medium">{exp.company}</p>
+              <p className="text-gray-400 text-sm">{exp.period}</p>
             </div>
-            <ul className="list-disc list-inside text-gray-600 space-y-2">
+            <ul className="list-disc list-inside text-gray-300 space-y-2">
               {exp.description.map((item, i) => (
                 <li key={i}>{item}</li>
               ))}

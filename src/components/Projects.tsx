@@ -36,30 +36,30 @@ const projects: Project[] = [
 export default function Projects() {
   return (
     <section id="projects" className="py-20">
-      <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
+      <h2 className="text-3xl font-bold text-white mb-12 text-center">
         Featured Projects
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
         {projects.map((project, index) => (
           <div
             key={index}
-            className="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden"
+            className="bg-gray-800 rounded-lg shadow-sm border border-gray-700 overflow-hidden"
           >
-            <div className="aspect-video bg-gray-100 relative">
+            <div className="aspect-video bg-gray-700 relative">
               <div className="absolute inset-0 flex items-center justify-center text-gray-400">
                 [Project Image]
               </div>
             </div>
             <div className="p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-2">
+              <h3 className="text-xl font-bold text-white mb-2">
                 {project.title}
               </h3>
-              <p className="text-gray-600 mb-4">{project.description}</p>
+              <p className="text-gray-300 mb-4">{project.description}</p>
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.technologies.map((tech, i) => (
                   <span
                     key={i}
-                    className="px-2 py-1 bg-gray-100 text-gray-600 rounded text-sm"
+                    className="px-2 py-1 bg-gray-700 text-gray-300 rounded text-sm"
                   >
                     {tech}
                   </span>
@@ -69,7 +69,7 @@ export default function Projects() {
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center"
+                className="text-blue-400 hover:text-blue-300 font-medium inline-flex items-center"
               >
                 View Project
                 <svg

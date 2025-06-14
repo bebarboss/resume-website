@@ -1,50 +1,72 @@
+interface Skill {
+  name: string
+  link: string
+}
+
 interface SkillCategory {
   title: string
-  skills: string[]
+  skills: Skill[]
 }
 
 const skillCategories: SkillCategory[] = [
   {
-    title: 'Frontend',
-    skills: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'HTML5', 'CSS3']
+    title: 'Office Tools',
+    skills: [
+      { name: 'Microsoft Word', link: 'https://www.microsoft.com/en-us/microsoft-365/word' },
+      { name: 'Microsoft Excel', link: 'https://www.microsoft.com/en-us/microsoft-365/excel' },
+      { name: 'Microsoft PowerPoint', link: 'https://www.microsoft.com/en-us/microsoft-365/powerpoint' },
+      { name: 'Notion', link: 'https://www.notion.so/' }
+    ]
   },
   {
-    title: 'Backend',
-    skills: ['Node.js', 'Express', 'Python', 'Django', 'PostgreSQL', 'MongoDB']
+    title: 'Programming Tools',
+    skills: [
+      { name: 'Python', link: 'https://www.python.org/' },
+      { name: 'SQL', link: 'https://www.w3schools.com/sql/' },
+      { name: 'Arduino IDE', link: 'https://www.arduino.cc/en/software' },
+      { name: 'Git', link: 'https://git-scm.com/' },
+      { name: 'GitHub', link: 'https://github.com/bebarboss' }
+    ]
   },
   {
-    title: 'DevOps',
-    skills: ['Docker', 'AWS', 'CI/CD', 'Git', 'Linux', 'Nginx']
-  },
-  {
-    title: 'Tools & Others',
-    skills: ['VS Code', 'Figma', 'Jest', 'Webpack', 'REST APIs', 'GraphQL']
+    title: 'Design Tools',
+    skills: [
+      { name: 'SolidWorks', link: 'https://www.solidworks.com/' },
+      { name: 'Altium Designer', link: 'https://www.altium.com/altium-designer' },
+      { name: 'Adobe Photoshop', link: 'https://www.adobe.com/products/photoshop.html' },
+      { name: 'Adobe Premiere Pro', link: 'https://www.adobe.com/products/premiere.html' },
+      { name: 'Adobe Illustrator', link: 'https://www.adobe.com/products/illustrator.html' },
+      { name: 'Canva', link: 'https://www.canva.com/' }
+    ]
   }
 ]
 
 export default function Skills() {
   return (
     <section id="skills" className="py-20">
-      <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
+      <h2 className="text-3xl font-bold text-white mb-12 text-center">
         Skills & Expertise
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
         {skillCategories.map((category, index) => (
           <div
             key={index}
-            className="bg-white p-6 rounded-lg shadow-sm border border-gray-100"
+            className="bg-gray-800 p-6 rounded-lg shadow-sm border border-gray-700"
           >
-            <h3 className="text-xl font-bold text-gray-900 mb-4">
+            <h3 className="text-xl font-bold text-white mb-4">
               {category.title}
             </h3>
             <div className="flex flex-wrap gap-2">
               {category.skills.map((skill, i) => (
-                <span
+                <a
                   key={i}
-                  className="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm"
+                  href={skill.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-3 py-1 bg-blue-900/50 text-blue-300 rounded-full text-sm hover:bg-blue-800/50 hover:text-blue-200 transition-colors"
                 >
-                  {skill}
-                </span>
+                  {skill.name}
+                </a>
               ))}
             </div>
           </div>
