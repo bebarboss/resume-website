@@ -2,34 +2,6 @@
 
 import Image from 'next/image'
 
-interface EducationItem {
-  degree: string
-  school: {
-    name: string
-    link: string
-  }
-  period: string
-  description: string[]
-  logo: string
-}
-
-const education: EducationItem[] = [
-  {
-    degree: 'Bachelor of Engineering',
-    school: {
-      name: "King Mongkut's Institute of Technology Ladkrabang",
-      link: 'https://www.kmitl.ac.th/'
-    },
-    period: '2008 - 2012',
-    description: [
-      'Major in Electronics Engineering',
-      'GPA: 2.75',
-      'Relevant coursework: Digital Electronics, Microcontrollers, Circuit Design'
-    ],
-    logo: '/images/logos/kmitl.png'
-  }
-]
-
 export default function Education() {
   return (
     <section id="education" className="py-20">
@@ -41,7 +13,7 @@ export default function Education() {
           <div className="flex items-start gap-4">
             <div className="relative w-16 h-16 flex-shrink-0">
               <Image
-                src="https://www.hr.kmitl.ac.th/wp-content/uploads/2020/08/cropped-kmitl-logoThai.png"
+                src="https://media.licdn.com/dms/image/C4E0BAQH4QXxJpJpqFA/company-logo_200_200/0/1630997552198/king_mongkuts_institute_of_technology_ladkrabang_logo?e=2147483647&v=beta&t=Tz8QaH9FYNc5MxfzPGQp-N3QgEIZBHrZmLQXvZVVVA4"
                 alt="KMITL logo"
                 fill
                 className="rounded-lg object-cover"
