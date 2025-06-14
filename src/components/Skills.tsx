@@ -1,3 +1,5 @@
+'use client'
+
 interface Skill {
   name: string
   link: string
@@ -51,9 +53,9 @@ export default function Skills() {
         {skillCategories.map((category, index) => (
           <div
             key={index}
-            className="bg-gray-800 p-6 rounded-lg shadow-sm border border-gray-700"
+            className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700"
           >
-            <h3 className="text-xl font-bold text-white mb-4">
+            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
               {category.title}
             </h3>
             <div className="flex flex-wrap gap-2">
@@ -63,7 +65,7 @@ export default function Skills() {
                   href={skill.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-3 py-1 bg-blue-900/50 text-blue-300 rounded-full text-sm hover:bg-blue-800/50 hover:text-blue-200 transition-colors"
+                  className="px-3 py-1 bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-300 rounded-full text-sm hover:bg-blue-200 dark:hover:bg-blue-800/50 hover:text-blue-700 dark:hover:text-blue-200 transition-colors"
                 >
                   {skill.name}
                 </a>
