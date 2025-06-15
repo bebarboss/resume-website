@@ -5,7 +5,11 @@ import { smoothScroll } from '@/utils/smoothScroll'
 export default function Navbar() {
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     e.preventDefault();
-    smoothScroll(targetId);
+    if (targetId === 'top') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      smoothScroll(targetId);
+    }
   };
 
   return (
@@ -15,8 +19,8 @@ export default function Navbar() {
           <div className="flex items-center">
             <a
               href="#"
-              onClick={(e) => handleNavClick(e, '#')}
-              className="text-xl font-bold text-white"
+              onClick={(e) => handleNavClick(e, 'top')}
+              className="text-xl font-bold text-white hover:text-gray-300 transition-colors"
             >
               NVR
             </a>

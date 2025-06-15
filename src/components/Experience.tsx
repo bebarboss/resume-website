@@ -63,7 +63,7 @@ export default function Experience() {
               className="bg-gray-800 rounded-lg p-6 shadow-lg border border-gray-700"
             >
               <div className="flex items-start gap-4">
-                <div className="relative w-16 h-16 flex-shrink-0">
+                <div className="relative w-16 h-16 flex-shrink-0 bg-white rounded-lg p-4">
                   <Image
                     src={experience.logo}
                     alt={`${experience.company} logo`}

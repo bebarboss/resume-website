@@ -24,13 +24,13 @@ const projects: Project[] = [
     link: 'https://github.com/username/taskmanager'
   },
   {
-    title: 'AI Content Generator',
+    title: 'Business Intelligence Dashboard',
     description:
-      'An AI-powered content generation tool that helps create SEO-optimized articles.',
-    technologies: ['Python', 'TensorFlow', 'FastAPI', 'React'],
-    image: '/projects/aigenerator.jpg',
-    link: 'https://github.com/username/aigenerator'
-  }
+      'An interactive BI dashboard providing real-time sales analytics and performance metrics using Power BI.',
+    technologies: ['Power BI', 'DAX', 'SQL', 'Excel'],
+    image: '/images/pack-out.PNG',
+    link: 'https://app.powerbi.com/view?r=eyJrIjoiYmJmMTYxMWEtZmJmMi00ZmEwLTljNGUtNmNhMjdiNDgyOWQ0IiwidCI6IjkxNzM3MjA0LTcxM2ItNGU5Mi04N2MyLTE5YmFjOWNkZjg3YiIsImMiOjEwfQ%3D%3D'
+  },
 ]
 
 export default function Projects() {

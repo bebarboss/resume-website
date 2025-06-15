@@ -3,6 +3,14 @@
 import Image from 'next/image'
 
 export default function Hero() {
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+    e.preventDefault()
+    const section = document.getElementById(sectionId)
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
     <section id="hero" className="py-20">
       <div className="max-w-3xl mx-auto text-center">
@@ -24,18 +32,26 @@ export default function Hero() {
           Navarit Rodsamrit
         </h1>
         <p className="text-xl text-gray-300 mb-8">
-          Manufacturing Supervisor | Electronics Engineer
+          Manufacturing Supervisor | Utac thai
         </p>
         <div className="flex justify-center">
           <a
             href="https://www.linkedin.com/in/navarit-rodsamrit-554121240/"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+            className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors mr-4"
           >
             LinkedIn
           </a>
+          <a
+            href="#contact"
+            className="bg-gray-700 text-white px-6 py-2 rounded-lg hover:bg-gray-600 transition-colors"
+            onClick={(e) => handleNavClick(e, 'contact')}
+          >
+            Contact Me
+          </a>
         </div>
+        
       </div>
     </section>
   )
